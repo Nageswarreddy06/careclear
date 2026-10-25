@@ -1,0 +1,11 @@
+{
+  "name": "careclear",
+  "version": "1.0.0",
+  "description": "AI-powered tool that turns hospital discharge summaries into a clear home-care plan",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "license": "MIT"
+}
