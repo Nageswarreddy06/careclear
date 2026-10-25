@@ -48,7 +48,7 @@
 
   // Settings
   $('apiKey').value = store.get('cc_key');
-  $('model').value = store.get('cc_model') || 'gemini-3.5-flash-lite';
+  $('model').value = store.get('cc_model') || 'gemini-3.8-flash';
   $('settingsBtn').addEventListener('click', function () { $('settings').showModal(); });
   $('closeSettings').addEventListener('click', function () { $('settings').close(); });
   $('saveSettings').addEventListener('click', function () {
@@ -66,7 +66,7 @@
 
   function updateModeHint() {
     $('modeHint').textContent = store.get('cc_key')
-      ? 'Live mode: using ' + (store.get('cc_model') || 'gemini-3.5-flash-lite') + '.'
+      ? 'Live mode: using ' + (store.get('cc_model') || 'gemini-3.8-flash') + '.'
       : 'Demo mode: no API key set, so the two samples use saved AI output. Add a free Gemini key in AI settings to process any summary.';
   }
   updateModeHint();
@@ -130,7 +130,7 @@
     hideStatus(); setStep(null);
     if (text.length < 80) { showStatus('Please paste a discharge summary (or load a sample) first.', 'err'); return; }
     const key = store.get('cc_key');
-    const model = store.get('cc_model') || 'gemini-3.5-flash-lite';
+    const model = store.get('cc_model') || 'gemini-3.8-flash';
     const lang = $('lang').value;
     const demo = !key;
     if (demo && !activeSample) {
